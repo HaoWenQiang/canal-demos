@@ -12,8 +12,8 @@ import java.util.Map;
 /**
  * 消息对应com.alibaba.otter.canal.protocol->FlatMessage
  *
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @Data
 @Builder

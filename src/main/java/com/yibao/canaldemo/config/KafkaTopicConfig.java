@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Set;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @Configuration
 public class KafkaTopicConfig implements InitializingBean {

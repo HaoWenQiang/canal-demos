@@ -10,7 +10,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author houxiurong
+ * @author D
  * @date 2019-07-27
  */
 @Slf4j

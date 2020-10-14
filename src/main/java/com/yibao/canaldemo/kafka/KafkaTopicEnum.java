@@ -1,30 +1,22 @@
 package com.yibao.canaldemo.kafka;
 
-import lombok.Getter;
 
 import java.util.Objects;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 public enum KafkaTopicEnum {
     /**
      * kafka topic
      * 数据库名+"_"+表名
      */
-    DEFAULT_TOPIC("default.topic", "默认topic"),
-    PATIENT_DOCTOR_RELATION("yibao_health_yb_patient_doctor_relation", "医生患者关系表topic"),
-    PATIENT_GROUP_INSTANCE("yibao_health_yb_doctor_patient_grouping_instance", "医生患者表分组topic"),
-    PATIENT_SCAN_LOG("yibao_health_yb_patient_scan_log", "医生患者扫码topic"),
-    RECORD_DOCTOR_ADVICE("yibao_health_yb_patient_visit_record_doctor_advice", "医生建议topic"),
-    RECORD_DISEASE_RELATION("yibao_health_yb_patient_visit_record_disease_relation", "就诊记录疾病topic"),
+    DEFAULT_TOPIC("yjmap", "默认topic")
     ;
 
-    @Getter
     private String topic;
 
-    @Getter
     private String desc;
 
     KafkaTopicEnum(String topic, String desc) {
@@ -39,5 +31,21 @@ public enum KafkaTopicEnum {
             }
         }
         return null;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

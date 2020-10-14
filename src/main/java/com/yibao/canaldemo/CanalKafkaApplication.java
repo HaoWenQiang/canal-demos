@@ -11,8 +11,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @SpringBootApplication(scanBasePackages = {"com.yibao.canaldemo"})
 @MapperScan(basePackages = {"com.yibao.cannaldemo.dao"})

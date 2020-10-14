@@ -16,8 +16,8 @@ import org.springframework.kafka.core.ProducerFactory;
 import java.util.Map;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @Configuration
 @EnableKafka

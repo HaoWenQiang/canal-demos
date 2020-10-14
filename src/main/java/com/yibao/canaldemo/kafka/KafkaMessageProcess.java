@@ -3,7 +3,7 @@ package com.yibao.canaldemo.kafka;
 import com.yibao.canaldemo.canal.TableBean;
 
 /**
- * @author houxiurong
+ * @author D
  * @date 2019-07-27
  */
 public interface KafkaMessageProcess {

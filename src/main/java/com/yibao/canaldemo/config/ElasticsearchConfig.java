@@ -15,10 +15,10 @@ import org.springframework.util.StringUtils;
 import java.net.InetAddress;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
-@Component
+//@Component
 public class ElasticsearchConfig implements DisposableBean {
     private static final Logger logger = LoggerFactory.getLogger(ElasticsearchConfig.class);
 

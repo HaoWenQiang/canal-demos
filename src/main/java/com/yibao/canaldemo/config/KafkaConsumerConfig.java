@@ -18,8 +18,8 @@ import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 import java.util.Map;
 
 /**
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @Slf4j
 @Configuration

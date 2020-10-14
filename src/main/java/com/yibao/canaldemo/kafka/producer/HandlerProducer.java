@@ -13,8 +13,8 @@ import java.util.concurrent.Future;
 /**
  * kafka的producer
  *
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 @Component
 public class HandlerProducer {

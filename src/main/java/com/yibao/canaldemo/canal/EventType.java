@@ -5,8 +5,8 @@ import lombok.Getter;
 /**
  * CanalEntry 151 line->EventType
  *
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 public enum EventType {
     /**

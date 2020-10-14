@@ -13,8 +13,8 @@ import java.util.Map;
 /**
  * 原始yb_patient_doctor_relation的处理
  *
- * @author houxiurong
- * @date 2019-07-26
+ * @author D
+ * @date
  */
 //@Component
 public class DataConsumerListener {
