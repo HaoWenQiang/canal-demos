@@ -23,12 +23,16 @@ public class KafkaMessageProcessFactory implements CommandLineRunner {
     private static final Map<KafkaTopicEnum, KafkaMessageProcess> processMap = Maps.newConcurrentMap();
 
     @Autowired
-    public KafkaMessageProcessFactory(List<KafkaMessageProcess> processList) {
-        processList.forEach(m -> processMap.put(m.getTopic(), m));
-    }
+    List<KafkaMessageProcess> processList;
+
+//    @Autowired
+//    public KafkaMessageProcessFactory(List<KafkaMessageProcess> processList) {
+//        processList.forEach(m -> processMap.put(m.getTopic(), m));
+//    }
 
     public void process(TableBean message) {
-        KafkaMessageProcess process = processMap.get(KafkaTopicEnum.valueOfTopic(message.getDatabase() + "_" + message.getTable()));
+//        KafkaMessageProcess process = processMap.get(KafkaTopicEnum.valueOfTopic(message.getDatabase() + "_" + message.getTable()));
+        KafkaMessageProcess process = processMap.get(KafkaTopicEnum.valueOfTopic(message.getDatabase()));
         if (process == null) {
             log.error("找不到该topic={}的对应process message = {}",
                     (message.getDatabase() + "_" + message.getTable()), JSON.toJSONString(message));
@@ -48,6 +52,6 @@ public class KafkaMessageProcessFactory implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+        processList.forEach(m -> processMap.put(m.getTopic(), m));
     }
 }

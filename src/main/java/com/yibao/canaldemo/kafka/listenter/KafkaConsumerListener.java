@@ -22,14 +22,11 @@ public class KafkaConsumerListener {
 
     @KafkaListener(topics = {"#{'${topics}'.split(',')}"})
     public void listener(ConsumerRecord<?, ?> record) {
-        log.info("Consumer--->" + record.topic() + "～～～～～～listener");
-        log.info("kafka消息:\n" + record.toString());
-        log.info("开始消费[kafka offset ={},topic= {},partition={},key ={},\nvalue={}", record.offset(), record.topic(), record.partition(),
-                record.key(), record.value());
         log.info("消费数据:" + record.value().toString());
         //工厂模式处理不同topic类型的消息
         TableBean tableBean = JSON.parseObject(record.value().toString(), TableBean.class);
         kafkaMessageProcessFactory.process(tableBean);
-        log.info("消费结束[kafka topic:{},partition:{}]", tableBean.getDatabase() + "_" + tableBean.getTable(), record.partition());
+//        log.info("消费结束[kafka topic:{},partition:{}]", tableBean.getDatabase() + "_" + tableBean.getTable(), record.partition());
+        log.info("消费结束[kafka topic:{},partition:{}]", tableBean.getDatabase(), record.partition());
     }
 }

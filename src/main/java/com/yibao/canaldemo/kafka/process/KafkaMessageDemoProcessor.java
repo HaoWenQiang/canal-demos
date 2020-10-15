@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author D
  * @date 2019/07/05
- * 不同topic 对应不同实现
+ * 该实现用于处理 mjmap 的topic
  */
 @Slf4j
 @Service

@@ -6,6 +6,7 @@ import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 /**
  * @author D
  * @date 2019-07-27
+ * 不同topic 对应不同实现
  */
 public interface KafkaMessageProcess {
 

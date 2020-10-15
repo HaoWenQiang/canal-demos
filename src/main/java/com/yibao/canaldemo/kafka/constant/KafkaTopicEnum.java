@@ -10,10 +10,9 @@ import java.util.Objects;
 public enum KafkaTopicEnum {
     /**
      * kafka topic
-     * 数据库名+"_"+表名
      */
-    DEFAULT_TOPIC("yjmap", "默认topic")
-    ;
+    DEFAULT_TOPIC("yjmap", "默认topic"),
+    YJMAP_TOPIC("yjmap1", "topic-test1");
 
     private String topic;
 
@@ -37,15 +36,9 @@ public enum KafkaTopicEnum {
         return topic;
     }
 
-    public void setTopic(String topic) {
-        this.topic = topic;
-    }
 
     public String getDesc() {
         return desc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
 }
