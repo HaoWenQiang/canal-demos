@@ -1,12 +1,19 @@
 package com.yibao.canaldemo.config;
 
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.elasticsearch.common.unit.ByteSizeUnit;
+import org.elasticsearch.common.unit.ByteSizeValue;
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.xpack.client.PreBuiltXPackTransportClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -51,6 +58,29 @@ public class ElasticsearchConfig implements DisposableBean {
         logger.info("elasticsearch transportClient 连接成功");
         return transportClient;
     }
+
+    @Bean
+    public BulkProcessor bulkProcessor(TransportClient transportClient) {
+        return BulkProcessor.builder(transportClient, new BulkProcessor.Listener() {
+            @Override
+            public void beforeBulk(long executionId, BulkRequest request) {
+                logger.info("{} : Push bulk data to es, size is {}", executionId, request.requests().size());
+            }
+
+            @Override
+            public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {
+                logger.info("{} : {} data has been saved in elasticsearch. It tooks {} mills, {}", executionId, request.numberOfActions(), response.getTook().getMillis(), response.hasFailures());
+            }
+
+            @Override
+            public void afterBulk(long executionId, BulkRequest request, Throwable failure) {
+                logger.info("{} : Failed...", executionId);
+            }
+        }).setBulkActions(2000)
+                .setBulkSize(new ByteSizeValue(1, ByteSizeUnit.MB))
+                .setFlushInterval(TimeValue.timeValueSeconds(5)).build();
+    }
+
 
     @Override
     public void destroy() {

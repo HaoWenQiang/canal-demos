@@ -61,6 +61,8 @@ public class DataConsumerListener {
                 break;
             case CanalEntry.EventType.QUERY_VALUE:
                 break;
+            default:
+                System.out.println("do nothing");
         }
     }
 

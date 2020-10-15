@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author D
  * @date 2019-07-27
@@ -29,4 +31,12 @@ public class KafkaConsumerListener {
 //        log.info("消费结束[kafka topic:{},partition:{}]", tableBean.getDatabase() + "_" + tableBean.getTable(), record.partition());
         log.info("消费结束[kafka topic:{},partition:{}]", tableBean.getDatabase(), record.partition());
     }
+
+//  这种方式 消息被切碎，还需要自己手动拼装
+//    public void listener(List<String> list) {
+//        // 测试 list
+//        for (String s : list) {
+//            System.out.println("s = " + s);
+//        }
+//    }
 }

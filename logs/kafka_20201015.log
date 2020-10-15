@@ -1,0 +1,79 @@
+2020-10-15 13:56:03 INFO  - ## started the CanalKafkaApplication ##
+2020-10-15 13:56:03 INFO  - Starting CanalKafkaApplication on bogon with PID 42257 (/Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch/target/classes started by ouhiroshi in /Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch)
+2020-10-15 13:56:03 INFO  - The following profiles are active: dev
+2020-10-15 13:56:04 WARN  - No MyBatis mapper was found in '[com.yibao.cannaldemo.dao]' package. Please check your configuration.
+2020-10-15 13:56:04 WARN  - No MyBatis mapper was found in '[com.yibao.canaldemo]' package. Please check your configuration.
+2020-10-15 13:56:04 INFO  - Initializing ProtocolHandler ["http-nio-18080"]
+2020-10-15 13:56:04 INFO  - Starting service [Tomcat]
+2020-10-15 13:56:04 INFO  - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-10-15 13:56:05 INFO  - Initializing Spring embedded WebApplicationContext
+2020-10-15 13:56:05 INFO  - kafka消费者配置加载...
+2020-10-15 13:56:05 INFO  - kafka生产者配置加载...
+2020-10-15 13:56:06 INFO  - Starting ProtocolHandler ["http-nio-18080"]
+2020-10-15 13:56:06 INFO  - Started CanalKafkaApplication in 2.857 seconds (JVM running for 3.698)
+2020-10-15 13:57:29 INFO  - 消费数据:{"data":[{"id":"20","test_colume":"test20","create_time":"2020-10-13 00:00:00"}],"database":"yjmap","es":1602741449000,"id":14,"isDdl":false,"mysqlType":{"id":"int","test_colume":"varchar(64)","create_time":"datetime"},"old":null,"pkNames":["id"],"sql":"","sqlType":{"id":4,"test_colume":12,"create_time":93},"table":"test","ts":1602741449320,"type":"INSERT"}
+2020-10-15 13:57:29 INFO  - 开始消费消息:{"data":[{"create_time":"2020-10-13 00:00:00","test_colume":"test20","id":"20"}],"database":"yjmap","es":1602741449000,"isDdl":false,"mysqlType":{"create_time":"datetime","test_colume":"varchar(64)","id":"int"},"sql":"","sqlType":{"create_time":93,"test_colume":12,"id":4},"table":"test","ts":1602741449320,"type":"INSERT"}
+2020-10-15 13:57:29 INFO  - 消费:{"data":[{"create_time":"2020-10-13 00:00:00","test_colume":"test20","id":"20"}],"database":"yjmap","es":1602741449000,"isDdl":false,"mysqlType":{"create_time":"datetime","test_colume":"varchar(64)","id":"int"},"sql":"","sqlType":{"create_time":93,"test_colume":12,"id":4},"table":"test","ts":1602741449320,"type":"INSERT"}
+2020-10-15 13:57:29 INFO  - 消费消息结束,数据更新类型: INSERT
+2020-10-15 13:57:29 INFO  - 消费结束[kafka topic:yjmap,partition:0]
+2020-10-15 14:06:47 INFO  - ## started the CanalKafkaApplication ##
+2020-10-15 14:06:48 INFO  - Starting CanalKafkaApplication on bogon with PID 42302 (/Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch/target/classes started by ouhiroshi in /Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch)
+2020-10-15 14:06:48 INFO  - The following profiles are active: dev
+2020-10-15 14:06:48 WARN  - No MyBatis mapper was found in '[com.yibao.cannaldemo.dao]' package. Please check your configuration.
+2020-10-15 14:06:49 WARN  - No MyBatis mapper was found in '[com.yibao.canaldemo]' package. Please check your configuration.
+2020-10-15 14:06:49 INFO  - Initializing ProtocolHandler ["http-nio-18080"]
+2020-10-15 14:06:49 INFO  - Starting service [Tomcat]
+2020-10-15 14:06:49 INFO  - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-10-15 14:06:49 INFO  - Initializing Spring embedded WebApplicationContext
+2020-10-15 14:06:49 INFO  - kafka消费者配置加载...
+2020-10-15 14:06:49 INFO  - kafka生产者配置加载...
+2020-10-15 14:06:51 INFO  - Starting ProtocolHandler ["http-nio-18080"]
+2020-10-15 14:06:51 INFO  - Started CanalKafkaApplication in 3.126 seconds (JVM running for 4.053)
+2020-10-15 14:06:59 INFO  - 消费数据:{"data":[{"id":"21","test_colume":"test21","create_time":"2020-10-13 00:00:00"}],"database":"yjmap","es":1602742019000,"id":15,"isDdl":false,"mysqlType":{"id":"int","test_colume":"varchar(64)","create_time":"datetime"},"old":null,"pkNames":["id"],"sql":"","sqlType":{"id":4,"test_colume":12,"create_time":93},"table":"test","ts":1602742019411,"type":"INSERT"}
+2020-10-15 14:06:59 INFO  - 开始消费消息:{"data":[{"create_time":"2020-10-13 00:00:00","test_colume":"test21","id":"21"}],"database":"yjmap","es":1602742019000,"isDdl":false,"mysqlType":{"create_time":"datetime","test_colume":"varchar(64)","id":"int"},"sql":"","sqlType":{"create_time":93,"test_colume":12,"id":4},"table":"test","ts":1602742019411,"type":"INSERT"}
+2020-10-15 14:06:59 INFO  - 消费消息结束,数据更新类型: INSERT
+2020-10-15 14:06:59 INFO  - 消费结束[kafka topic:yjmap,partition:0]
+2020-10-15 15:34:55 INFO  - ## started the CanalKafkaApplication ##
+2020-10-15 15:34:55 INFO  - Starting CanalKafkaApplication on bogon with PID 43435 (/Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch/target/classes started by ouhiroshi in /Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch)
+2020-10-15 15:34:55 INFO  - The following profiles are active: dev
+2020-10-15 15:34:56 WARN  - No MyBatis mapper was found in '[com.yibao.cannaldemo.dao]' package. Please check your configuration.
+2020-10-15 15:34:56 WARN  - No MyBatis mapper was found in '[com.yibao.canaldemo]' package. Please check your configuration.
+2020-10-15 15:34:57 INFO  - Initializing ProtocolHandler ["http-nio-18080"]
+2020-10-15 15:34:57 INFO  - Starting service [Tomcat]
+2020-10-15 15:34:57 INFO  - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-10-15 15:34:57 INFO  - Initializing Spring embedded WebApplicationContext
+2020-10-15 15:34:57 INFO  - kafka消费者配置加载...
+2020-10-15 15:34:57 INFO  - kafka生产者配置加载...
+2020-10-15 15:34:57 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaConsumerListener': Unsatisfied dependency expressed through field 'kafkaMessageProcessFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaMessageProcessFactory': Unsatisfied dependency expressed through field 'processList'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaMessageDemoProcessor': Unsatisfied dependency expressed through field 'bulkProcessor'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.elasticsearch.action.bulk.BulkProcessor' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-10-15 15:34:57 INFO  - Stopping service [Tomcat]
+2020-10-15 15:34:57 ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field bulkProcessor in com.yibao.canaldemo.kafka.process.KafkaMessageDemoProcessor required a bean of type 'org.elasticsearch.action.bulk.BulkProcessor' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.elasticsearch.action.bulk.BulkProcessor' in your configuration.
+
+2020-10-15 15:35:55 INFO  - ## started the CanalKafkaApplication ##
+2020-10-15 15:35:56 INFO  - Starting CanalKafkaApplication on bogon with PID 43440 (/Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch/target/classes started by ouhiroshi in /Users/ouhiroshi/Documents/IDEA/study/canal-stutdy/canal-kafka-elasticsearch)
+2020-10-15 15:35:56 INFO  - The following profiles are active: dev
+2020-10-15 15:35:56 WARN  - No MyBatis mapper was found in '[com.yibao.cannaldemo.dao]' package. Please check your configuration.
+2020-10-15 15:35:56 WARN  - No MyBatis mapper was found in '[com.yibao.canaldemo]' package. Please check your configuration.
+2020-10-15 15:35:57 INFO  - Initializing ProtocolHandler ["http-nio-18080"]
+2020-10-15 15:35:57 INFO  - Starting service [Tomcat]
+2020-10-15 15:35:57 INFO  - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-10-15 15:35:57 INFO  - Initializing Spring embedded WebApplicationContext
+2020-10-15 15:35:57 INFO  - kafka消费者配置加载...
+2020-10-15 15:35:57 INFO  - kafka生产者配置加载...
+2020-10-15 15:35:59 INFO  - Starting ProtocolHandler ["http-nio-18080"]
+2020-10-15 15:35:59 INFO  - Started CanalKafkaApplication in 3.517 seconds (JVM running for 4.531)

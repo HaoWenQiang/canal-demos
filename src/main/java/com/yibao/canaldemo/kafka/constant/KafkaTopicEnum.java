@@ -6,13 +6,14 @@ import java.util.Objects;
 /**
  * @author D
  * @date
+ * 新增topic 直接加到这里并实现 KafkaMessageProcess
  */
 public enum KafkaTopicEnum {
     /**
      * kafka topic
      */
     DEFAULT_TOPIC("yjmap", "默认topic"),
-    YJMAP_TOPIC("yjmap1", "topic-test1");
+    TEST_TOPIC("test", "默认topic");
 
     private String topic;
 

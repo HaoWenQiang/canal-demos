@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
 
-	<property name="logPath" value="../logs"/>
+	<property name="logPath" value="./logs"/>
 
   	<!-- 文件輸出 -->   
   	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">

@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.yibao.canaldemo.canal.TableBean;
 import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.action.index.IndexRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -22,7 +25,19 @@ public class KafkaMessageDemoProcessor implements KafkaMessageProcess {
 
     @Override
     public void process(TableBean message) {
-        log.info("消费:" + JSON.toJSONString(message));
+        System.err.println("模拟消费:" + JSON.toJSONString(message));
+
+    }
+//    暂时不用
+//    @Autowired
+    BulkProcessor bulkProcessor;
+
+    private void sync2Es(TableBean message) {
+        bulkProcessor
+//          删除使用的 api       DeleteRequest request = new DeleteRequest(index, type, id);
+                .add(new IndexRequest(message.getDatabase(),
+                        message.getTable(), message.getPkName().get(0)).source(message));
+        bulkProcessor.close();
     }
 
 }
