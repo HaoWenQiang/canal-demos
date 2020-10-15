@@ -10,7 +10,7 @@ Binlog Event深度解析Insert/Update/Delete,
 生成CanalEntry后给到Canal处理。
 
 首先看下binlog张啥样？
->hxr-mac:mysql houxiurong$ sudo /usr/local/mysql/bin/mysqlbinlog --no-defaults /usr/local/mysql/data/mysql-bin.000002
+>/usr/local/mysql/data/mysql-bin.000002
 
 ```bash
 #190730 11:36:35 server id 1  end_log_pos 44399 CRC32 0x5e6dce21 	Query	thread_id=149	exec_time=0	error_code=0
@@ -59,10 +59,17 @@ DELIMITER ;
 /*!50003 SET COMPLETION_TYPE=@OLD_COMPLETION_TYPE*/;
 /*!50530 SET @@SESSION.PSEUDO_SLAVE_MODE=0*/;
 ```
+
+
 ##### BinlogParser过程:
+
 Canal解析过程:
 
 ###### Binlog接收 --> Binlog Event解析 --> Insert/Update/Delete深度解析 --> 生成CanalEntry ==>Canal处理
+
+
+
+
 
 #### 基础功能说明
 canal-kafka-elasticsearch是基于阿里的Canal监控数据变化解析数据后发送到kafka,
@@ -504,7 +511,7 @@ d.查看启动的kafka topic list.
 
 ##### 4.安装zookeeper
 传送门:[zookeeper安装](https://www.jianshu.com/p/5491d16e6abd)
- 
+
 ##### 5. 安装Elasticsearch
 传送门:[Mac install elasticsearch](https://linux.cn/article-11125-1.html)
 a.Elasticsearch官网下载安装包elasticsearch-6.5.0.tar.gz,[release](https://www.elastic.co/downloads/elasticsearch)
