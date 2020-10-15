@@ -1,7 +1,7 @@
 package com.yibao.canaldemo.config;
 
 import com.google.common.collect.Maps;
-import com.yibao.canaldemo.kafka.KafkaTopicEnum;
+import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

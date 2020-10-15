@@ -1,6 +1,7 @@
-package com.yibao.canaldemo.kafka;
+package com.yibao.canaldemo.kafka.process;
 
 import com.yibao.canaldemo.canal.TableBean;
+import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 
 /**
  * @author D

@@ -1,7 +1,7 @@
 package com.yibao.canaldemo.config;
 
 import com.google.common.collect.Sets;
-import com.yibao.canaldemo.kafka.KafkaTopicEnum;
+import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;

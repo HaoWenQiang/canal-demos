@@ -2,7 +2,7 @@ package com.yibao.canaldemo.kafka.listenter;
 
 import com.alibaba.fastjson.JSON;
 import com.yibao.canaldemo.canal.TableBean;
-import com.yibao.canaldemo.kafka.KafkaMessageProcessFactory;
+import com.yibao.canaldemo.kafka.process.KafkaMessageProcessFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;

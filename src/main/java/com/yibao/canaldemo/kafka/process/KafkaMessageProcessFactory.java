@@ -1,10 +1,12 @@
-package com.yibao.canaldemo.kafka;
+package com.yibao.canaldemo.kafka.process;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Maps;
 import com.yibao.canaldemo.canal.TableBean;
+import com.yibao.canaldemo.kafka.constant.KafkaTopicEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.Map;
  */
 @Slf4j
 @Service
-public class KafkaMessageProcessFactory {
+public class KafkaMessageProcessFactory implements CommandLineRunner {
 
     private static final Map<KafkaTopicEnum, KafkaMessageProcess> processMap = Maps.newConcurrentMap();
 
@@ -44,4 +46,8 @@ public class KafkaMessageProcessFactory {
     }
 
 
+    @Override
+    public void run(String... args) throws Exception {
+
+    }
 }

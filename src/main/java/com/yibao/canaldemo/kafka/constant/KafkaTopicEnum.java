@@ -1,4 +1,4 @@
-package com.yibao.canaldemo.kafka;
+package com.yibao.canaldemo.kafka.constant;
 
 
 import java.util.Objects;
