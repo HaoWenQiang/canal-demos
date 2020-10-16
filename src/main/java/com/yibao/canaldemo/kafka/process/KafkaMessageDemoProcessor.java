@@ -36,7 +36,7 @@ public class KafkaMessageDemoProcessor implements KafkaMessageProcess {
         bulkProcessor
 //          删除使用的 api       DeleteRequest request = new DeleteRequest(index, type, id);
                 .add(new IndexRequest(message.getDatabase(),
-                        message.getTable(), message.getPkName().get(0)).source(message));
+                        message.getTable(), message.getPkNames().get(0)).source(message));
         bulkProcessor.close();
     }
 

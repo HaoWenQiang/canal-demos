@@ -64,7 +64,7 @@ public class TableBean implements Serializable {
     /**
      * 表主键
      */
-    private List<String> pkName;
+    private List<String> pkNames;
 
     /**
      * 表字段语句
